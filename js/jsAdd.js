@@ -44,7 +44,7 @@ $(document).ready(function () {
         
       },
       "CANCEL": function(){
-        alert("CANCEL button been pushed");
+        
         $(this).dialog("close");  
       }
     }
@@ -58,7 +58,7 @@ $(document).ready(function () {
       function sendTrackNum(){
       	 
       	 $trackNum = $('#trackingNum').val();
-
+      	 //post to the php page
       	 $.post('php/AddPackage.php', {
   	 		trackingNum : $trackNum,
   	 		method 		: "testTrackNum"

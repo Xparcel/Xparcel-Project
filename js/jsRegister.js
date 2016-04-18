@@ -43,7 +43,7 @@ $(document).ready(function () {
 		
 
 	}); //end click
-
+	//handels the post for the google register page
 	$('#glSubmitForm').click(function () {
 
 		alert("Button is working");
