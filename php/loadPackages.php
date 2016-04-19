@@ -59,7 +59,7 @@
 
 		    foreach ($sth as $row){
 		    		
-                        echo "<tr class='tb'> 
+                        echo "<tr id='table1' class='tb'> 
                        		
                             <td>$row[0]</td>
                             <td>$row[1]</td>
@@ -72,7 +72,7 @@
 	     //if there are not details to enter into the table
 	     else{
 	     	echo "<tr class ='tb'><td></td><td></td><td></td></tr>
-	     		   <tr class='tb'> 
+	     		   <tr id='table1' class='tb'> 
 
 	                            <td></td>
 	                            <td> <div class='alert alert-info'>

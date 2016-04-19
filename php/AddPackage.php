@@ -87,7 +87,7 @@
 
 		$sth->execute();
 
-		//echo $trackingNum ." | " . " :" . $_SESSION['$profileID'] . " | " .$date . " | " . $status ;
+		echo $date.",".$status."," .$trackingNum;
 
 		
 	}

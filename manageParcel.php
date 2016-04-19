@@ -52,7 +52,7 @@
             <div id ="packages" class='table-responsive'>
         
               <!-- Table Titles -->        
-              <table class='table'>
+              <table  class='table'>
                       <thead>  
                       <tr>
                       <th>DeliveryDate</th>
@@ -62,7 +62,7 @@
                   </thead>
               
                   <!-- Table Contents -->   
-                <tbody>
+                <tbody id = 'tableBody'>
                   <tr>
                   
                    <?php  
