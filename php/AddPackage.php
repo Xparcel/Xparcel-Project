@@ -89,8 +89,6 @@
 
 		//echo $trackingNum ." | " . " :" . $_SESSION['$profileID'] . " | " .$date . " | " . $status ;
 
-		include "loadPackages.php";
-
-		loadDetails();
+		
 	}
 ?>
