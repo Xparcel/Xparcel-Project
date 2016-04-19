@@ -1,6 +1,11 @@
 <?php
 	
-	session_start();
+	//FUTURE keep me logged in
+	if(session_id()){
+	}
+	else{
+		session_start();
+	}
 
 	include "connection.php";
 

@@ -8,7 +8,12 @@
 	const CLIENT_SECRET = '5Z18fd3FHTP4GB83Kz_nUF37';
 	const REDIRECT_URI = 'http://localhost/xparcel/php/googleSign.php';
 
-	session_start();
+	//FUTURE keep me logged in
+	if(session_id()){
+	}
+	else{
+		session_start();
+	}
 	//****************************Initialization******************************
 	//Application client details and authenication
 	$client = new Google_Client();

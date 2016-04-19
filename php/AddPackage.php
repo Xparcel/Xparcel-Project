@@ -1,14 +1,18 @@
 <?php
-	include "connection.php";
-
+	if(session_id()){
+	}
+	else{
+		session_start();
+		include "connection.php";
+	}
 	//if a post has occured
 	if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
 		//if the post method is testing the tracking number
 		if(isset($_POST['method']) && ($_POST['method'])=="testTrackNum"){
-
+			$trackingNum = $_POST['trackingNum'];
 			$Exsists = validateTrackNum();
 			
-			//send info for client to validate
+			//send info for client to validate and /or add to user DB
 			if($Exsists){
 				setPackageDetails();
 			}
@@ -52,7 +56,7 @@
 			return False;
 		}
 	}
-
+	//link the package details to the users account
 	function setPackageDetails(){
 
 		$sql = getPackageDetails();
@@ -64,7 +68,29 @@
 			$date = $result['deliverydate'];
 		}
 
-		echo "address : ". $add . " date : " .$date;
-		
+		$packageID = null;
+		//MUST CHANGE, NEED TO ADD STATUS TO MOCK DB !!!
+		$status = "no";
+		$trackingNum = $_POST['trackingNum'];
+
+		$DBH = connect();
+
+		$sql = ("INSERT INTO `packages` (`PackageID`,`UserProfileID`,`DeliveryDate`,`Status`,`TrackingNum`) VALUES (?,?,?,?,?);");
+
+		$sth = $DBH->prepare($sql);
+
+		$sth->bindParam(1,$packageID,PDO::PARAM_INT);
+		$sth->bindParam(2,$_SESSION['$profileID'],PDO::PARAM_INT);
+		$sth->bindParam(3,$date,PDO::PARAM_INT);
+		$sth->bindParam(4,$status,PDO::PARAM_INT);
+		$sth->bindParam(5,$trackingNum,PDO::PARAM_INT);
+
+		$sth->execute();
+
+		//echo $trackingNum ." | " . " :" . $_SESSION['$profileID'] . " | " .$date . " | " . $status ;
+
+		include "loadPackages.php";
+
+		loadDetails();
 	}
 ?>

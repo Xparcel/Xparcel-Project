@@ -74,9 +74,9 @@ body {
     
 }
 
-
-
-
+#PackSuccess{
+    display:none;
+}
 
 
 

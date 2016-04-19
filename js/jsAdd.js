@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
 
+	//windows tab layout
 	$('#table').tabs({
 		event: "click",
 	    // Effects: fadeIn, fadeOut, slideDown, slideUp, animate
@@ -38,37 +39,54 @@ $(document).ready(function () {
       	autoOpen: false,
       	buttons:{
         	"OK": function(){
-       	
-			sendTrackNum();
-            $(this).dialog("close");
-        
-      },
-      "CANCEL": function(){
-        
-        $(this).dialog("close");  
-      }
-    }
-     });
+	       	
+				sendTrackNum();
+	            $(this).dialog("close");
+	        
+	      	},
+	       "CANCEL": function(){
+	        
+	       		$(this).dialog("close");  
+	        }
+    	}
+    });
 
-      $('#btnAdd').click(function(){
-            
-            $("#Cdialog").dialog("open");
-      });
+	//if ad button clicked open dialog 'Cdialog' box
+	$('#btnAdd').click(function(){
 
+		$("#Cdialog").dialog("open");
+	});
+
+      //check for and add tracking number to users table
       function sendTrackNum(){
       	 
-      	 $trackNum = $('#trackingNum').val();
+      	 //$trackNum = $('#trackingNum').val();
       	 //post to the php page
       	 $.post('php/AddPackage.php', {
-  	 		trackingNum : $trackNum,
+  	 		trackingNum : $('#trackingNum').val(),
   	 		method 		: "testTrackNum"
 
   	 	 	},
   	 		function(data){  
 
-      	 		alert(data);
+      	 		if(!data){
+      	 			confirm("We could not find your tracking number");
+      	 		}
+      	 		else{
+      	 			alert(data);
+      	 			$('#PackSuccess').slideToggle(1000,function(){
+      	 			});
+      	 			setTimeout(toggleTimer,2000);	
+      	 		}
 
       	 });
+
+      	 //toggle the package success message
+      	 function toggleTimer(){
+      	 	$('#PackSuccess').slideToggle(1000,function(){
+      	 		//??
+      	 			});
+      	 }
       	
       	 
       }

@@ -85,6 +85,11 @@
 
                 </div>
               </div>
+              <!-- Success messge if package is found-->
+              <div id="PackSuccess" class="alert alert-success fade in">
+                <a href="#"  class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> Your Package has been added
+             </div>
              
              <!-- Buttons EDIT / UPDATE / DELETE -->
              <!-- EDIT  -->
@@ -101,7 +106,7 @@
          <div id="liveTrack">
          </div> 
         </div>
-
+        
         <!-- Modal for collecting tracking data-->
         <div id ="Cdialog" title ="Check for Packages">
           <form class="form-horizontal" method="post">
