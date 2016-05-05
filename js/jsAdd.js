@@ -73,6 +73,7 @@ $(document).ready(function () {
 		 			confirm("We could not find your tracking number");
 		 		}
 		 		else{
+		 			$('#alertNoPack').hide();
 		 			//store the retreived data in an array
 		 			var packArray = data.split(',');
 		 			

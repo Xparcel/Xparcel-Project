@@ -10,8 +10,9 @@
 		//if the post method is testing the tracking number
 		if(isset($_POST['method']) && ($_POST['method'])=="testTrackNum"){
 			$trackingNum = $_POST['trackingNum'];
-			$Exsists = validateTrackNum();
-			
+
+			//returns true or false
+			$Exsists = validateTrackNum();			
 			//send info for client to validate and /or add to user DB
 			if($Exsists){
 				setPackageDetails();
@@ -19,8 +20,6 @@
 			else{
 				echo False;
 			}
-
-			
 		}
 	}
 
@@ -44,6 +43,7 @@
 	//checks if the trtacking number exsistes in the mock database
 	function validateTrackNum(){
 
+		//returns details related to the tracking number
 		$sql = getPackageDetails();
 
 		$r = $sql->fetchAll(PDO::FETCH_NUM);
@@ -61,21 +61,24 @@
 
 		$sql = getPackageDetails();
 
+		//get the details of the package from MockDB
 		$detail = $sql->fetchAll(PDO::FETCH_ASSOC);
 		
 		foreach($detail as $result){
 			$add = $result['address'];
-			$date = $result['deliverydate'];
+			$date = $result['date'];
 		}
+
 
 		$packageID = null;
 		//MUST CHANGE, NEED TO ADD STATUS TO MOCK DB !!!
 		$status = "no";
 		$trackingNum = $_POST['trackingNum'];
 
+		//adds the verified details to the users account
 		$DBH = connect();
 
-		$sql = ("INSERT INTO `packages` (`PackageID`,`UserProfileID`,`DeliveryDate`,`Status`,`TrackingNum`) VALUES (?,?,?,?,?);");
+		$sql = ("INSERT INTO `packages` (`PackageID`,`UserProfileID`,`deliverydate`,`Status`,`TrackingNum`) VALUES (?,?,?,?,?);");
 
 		$sth = $DBH->prepare($sql);
 
@@ -87,8 +90,7 @@
 
 		$sth->execute();
 
+		//returns to js/Add.js to add to table of contents
 		echo $date.",".$status."," .$trackingNum;
-
-		
 	}
 ?>

@@ -8,9 +8,7 @@
 $(document).ready(function () {
 
 	//When the Create Account button is pressed
-	$('#submitForm').click(function () {
-
-		//alert("Button is working");
+	$('#submitForm').click(function() {
 
 		$.post('/xparcel/php/regPost.php', {
 
@@ -34,19 +32,16 @@ $(document).ready(function () {
 
 			method 		: "test"
 
-		}, function (data) {
-
-			alert(data);
-
+		}, function() {
+			window.location ="http://localhost/xparcel/manageParcel.php";
+			
 		}); //end callback
 
 		
 
 	}); //end click
 	//handels the post for the google register page
-	$('#glSubmitForm').click(function () {
-
-		alert("Button is working");
+	$('#glSubmitForm').click(function() {
 
 		$.post('/xparcel/php/regPost.php', {
 
@@ -67,13 +62,10 @@ $(document).ready(function () {
 
 			method 		: "test1"
 
-		}, function (data) {
-
-			alert(data);
-
+		}, function() {
+			
+			window.location = "http://localhost/xparcel/manageParcel.php";
 		}); //end callback
-
-		
 
 	}); //end click
 

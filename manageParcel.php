@@ -5,7 +5,7 @@
         include "php/loadPackages.php";
         //Session start included in loadPackages.php
       ?> 
-
+      <title>Xparcel</title>
       <!-- font awesome css  + Latest Bootstrap JS and CSS-->
       <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -106,6 +106,9 @@
          <div id="liveTrack">
          </div> 
         </div>
+        <?php
+          echo $_SESSION['$profileID'];
+        ?>
         
         <!-- Modal for collecting tracking data-->
         <div id ="Cdialog" title ="Check for Packages">

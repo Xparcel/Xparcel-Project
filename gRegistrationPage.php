@@ -2,7 +2,6 @@
 <html>
 <?php
    session_start();
-   echo $_SESSION['$userID'];
 ?>
    <head>
      <meta charset="UTF-8">

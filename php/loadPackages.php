@@ -3,6 +3,7 @@
 	/*This file is responsible for loading in existing package
 	details and verifying the existance of the package tracking 
 	number*/ 
+	
 	if(session_id()){
 	}
 	else{
@@ -37,6 +38,18 @@
 		}
 		//if there are no details to load
 		else{
+			echo "<tr class ='tb'><td></td><td></td><td></td></tr>
+	     		   <tr id='table1' class='tb'> 
+
+	                            <td></td>
+	                            <td> <div id='alertNoPack' class='alert alert-info'>
+    									<strong>Add a package! </strong> click the Add button to start managing your packages.
+  									</div>
+  								</td>
+	                            <td></td>
+	                            </tr> 
+
+	                            ";
 			
 		}
     }
@@ -75,15 +88,14 @@
 	     		   <tr id='table1' class='tb'> 
 
 	                            <td></td>
-	                            <td> <div class='alert alert-info'>
+	                            <td> <div id='alertNoPack' class='alert alert-info'>
     									<strong>Add a package! </strong> click the Add button to start managing your packages.
   									</div>
   								</td>
 	                            <td></td>
 	                            </tr> 
 
-	                            <tr class='tb'><td></td><td></td><td></td</tr>
-	                            <tr class='tb'><td></td><td></td><td></td></tr>";
+	                            ";
 
 	     }             
 

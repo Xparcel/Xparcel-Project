@@ -6,7 +6,7 @@
     include "php/googleSign.php";
     ?>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Xparcel Tracking</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +22,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          
           <!-- Login Dropdown - Facebook and Twitter -->
           <div class="login">
             <?php

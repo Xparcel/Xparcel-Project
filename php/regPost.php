@@ -4,9 +4,7 @@
 
 	session_start();
 
-
 	if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
-
 
 		if(isset($_POST['method']) && ($_POST['method']) == "test"){
 
@@ -22,8 +20,8 @@
 
 			DBSecAddJect($DBH);
 
-			echo "Account creatation successfully";
-			
+			//echo "Account creatation successfully";
+
 		}
 		else if(isset($_POST['method']) && ($_POST['method']) == "test1"){
 
@@ -37,13 +35,9 @@
 
 			DBSecAddJect($DBH);
 
-			echo "Account creatation successfully";
-			
+			//echo "Account creatation successfully";
 		}
-
-
 	}
-
 
 	//Inject Login details to Directlogin database.
 	function DBloginJect($DBH){
@@ -91,20 +85,15 @@
 
 		$sth->execute();
 
-		$profileID = $DBH->lastInsertId();
+		$_SESSION['$profileID'] = $DBH->lastInsertId();
 
 		//used for identifying user through out session
-		$_SESSION['$profileID'] = $profileID;
+		
 
 	}
 
 	//inject Primary Address in to UserAdd database
 	function DBPrimAddJect($DBH){
-
-		//Post methods for Primary address
-		/*$prim_Street    = ($_POST['prim_Street']);
-		$prim_City  = ($_POST['prim_City']);
-		$prim_Count  = ($_POST['prim_Count']);*/
 
 		$AddressID = null;
 		//track the address priority
@@ -123,16 +112,10 @@
 
 		$sth->execute();
 
-
 	}
 
 	//inject Secondary Address in to UserAdd database
 	function DBSecAddJect($DBH){
-
-		//post maethods for Secondary Address
-		/*$sec_Street  = ($_POST['sec_Street']);
-		$sec_City  = ($_POST['sec_City']);
-		$sec_Count  = ($_POST['sec_Count']);*/
 
 		$AddressID = null;
 		//track address priority

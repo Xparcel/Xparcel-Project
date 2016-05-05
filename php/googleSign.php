@@ -87,15 +87,16 @@
 
 	    	//return the usersID
 	    	returnID($email);
+	    	$_SESSION['$email'] = $email;
 	    	//send to manage.php page
 	    	header("location:http://localhost/xparcel/manageParcel.php?");
-	    	echo "It's TRUE";
 
 	    }
 	    else if($alive == FALSE){
 
 	    	//add Google details to DB
 	    	addGgleAccDB($email,$id);
+	    	$_SESSION['$email'] = $email;
 
 	    	//send to the register page
 	    	header("location:http://localhost/xparcel/gRegistrationPage.php?");
@@ -164,9 +165,10 @@
 
 		$sth->execute();
 
-		$userID = $DBH->lastInsertId();
+		$user = $DBH->lastInsertId();
 
 		//used for identifying user through outa session
-		$_SESSION['$userID'] = $userID;
+		$_SESSION['$userID'] = $user;
+		
 	}
 ?>
