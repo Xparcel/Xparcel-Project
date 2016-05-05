@@ -6,12 +6,6 @@
 	require_once __DIR__.'/gplus_lib/vendor/autoload.php';
 	const CLIENT_ID = '782605975680-81lcv2pm6voi6hk7andb7fig4ksqmi5h.apps.googleusercontent.com';
 	const CLIENT_SECRET = '5Z18fd3FHTP4GB83Kz_nUF37';
-<<<<<<< HEAD
-	const REDIRECT_URI = 'http://localhost
-    /xparcel/php/googleSign.php';
-
-	session_start();
-=======
 	const REDIRECT_URI = 'http://localhost/xparcel/php/googleSign.php';
 
 	//FUTURE keep me logged in
@@ -20,7 +14,6 @@
 	else{
 		session_start();
 	}
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	//****************************Initialization******************************
 	//Application client details and authenication
 	$client = new Google_Client();
@@ -94,25 +87,16 @@
 
 	    	//return the usersID
 	    	returnID($email);
-<<<<<<< HEAD
-	    	//send to manage.php page
-	    	header("location:http://localhost/xparcel/manageParcel.php?");
-	    	echo "It's TRUE";
-=======
 	    	$_SESSION['$email'] = $email;
 	    	//send to manage.php page
 	    	header("location:http://localhost/xparcel/manageParcel.php?");
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 
 	    }
 	    else if($alive == FALSE){
 
 	    	//add Google details to DB
 	    	addGgleAccDB($email,$id);
-<<<<<<< HEAD
-=======
 	    	$_SESSION['$email'] = $email;
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 
 	    	//send to the register page
 	    	header("location:http://localhost/xparcel/gRegistrationPage.php?");
@@ -181,17 +165,10 @@
 
 		$sth->execute();
 
-<<<<<<< HEAD
-		$userID = $DBH->lastInsertId();
-
-		//used for identifying user through outa session
-		$_SESSION['$userID'] = $userID;
-=======
 		$user = $DBH->lastInsertId();
 
 		//used for identifying user through outa session
 		$_SESSION['$userID'] = $user;
 		
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	}
 ?>

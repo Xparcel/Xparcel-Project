@@ -4,15 +4,8 @@
 
 	session_start();
 
-<<<<<<< HEAD
-
 	if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
 
-
-=======
-	if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
-
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 		if(isset($_POST['method']) && ($_POST['method']) == "test"){
 
 			//intialate database connection
@@ -27,13 +20,8 @@
 
 			DBSecAddJect($DBH);
 
-<<<<<<< HEAD
-			echo "Account creatation successfully";
-			
-=======
 			//echo "Account creatation successfully";
 
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 		}
 		else if(isset($_POST['method']) && ($_POST['method']) == "test1"){
 
@@ -47,21 +35,10 @@
 
 			DBSecAddJect($DBH);
 
-<<<<<<< HEAD
-			echo "Account creatation successfully";
-			
-		}
-
-
-	}
-
-
-=======
 			//echo "Account creatation successfully";
 		}
 	}
 
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	//Inject Login details to Directlogin database.
 	function DBloginJect($DBH){
 
@@ -108,31 +85,16 @@
 
 		$sth->execute();
 
-<<<<<<< HEAD
-		$profileID = $DBH->lastInsertId();
-
-		//used for identifying user through out session
-		$_SESSION['$profileID'] = $profileID;
-=======
 		$_SESSION['$profileID'] = $DBH->lastInsertId();
 
 		//used for identifying user through out session
 		
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 
 	}
 
 	//inject Primary Address in to UserAdd database
 	function DBPrimAddJect($DBH){
 
-<<<<<<< HEAD
-		//Post methods for Primary address
-		/*$prim_Street    = ($_POST['prim_Street']);
-		$prim_City  = ($_POST['prim_City']);
-		$prim_Count  = ($_POST['prim_Count']);*/
-
-=======
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 		$AddressID = null;
 		//track the address priority
 		$priority = 1;
@@ -150,23 +112,11 @@
 
 		$sth->execute();
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	}
 
 	//inject Secondary Address in to UserAdd database
 	function DBSecAddJect($DBH){
 
-<<<<<<< HEAD
-		//post maethods for Secondary Address
-		/*$sec_Street  = ($_POST['sec_Street']);
-		$sec_City  = ($_POST['sec_City']);
-		$sec_Count  = ($_POST['sec_Count']);*/
-
-=======
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 		$AddressID = null;
 		//track address priority
 		$priority = 2;
