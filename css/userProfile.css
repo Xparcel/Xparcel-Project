@@ -1,0 +1,152 @@
+body {
+	padding-top:70px;
+    margin-right: 80px;
+    margin-left: 130px;
+}
+
+
+/* Top title page */
+.title{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.socialBtn{
+    margin-left: 50px;
+    margin-top: 5%;
+    padding-bottom: 10px;
+
+}
+
+
+#face{
+    padding-right: 100px;
+}
+
+
+/* Quick Explanation of the page. */
+.intro{
+    color: gray;
+}
+
+
+/* Personal Information */
+#pInfo{
+    margin-top: -270px;
+    padding-bottom: 20px;
+}
+
+/* Profile picture */
+.userPhoto{
+    margin-right: 75%;
+}
+
+#uploadBtn{
+    margin-right: 80%;
+    padding-top: 20%;
+    padding-bottom: 50px;
+}
+
+#chooseF{
+    padding-top: 10%;
+}
+
+#js-upload-form{
+    margin-right: 70%;
+}
+
+#day{
+    padding-right: 140px;
+    margin-right: -20%;
+}
+
+#month{
+    margin-right: -180px;
+    padding-right: 140px;
+}
+
+#year{
+    margin-right: -10%;
+    padding-left: 90px;
+    
+}
+
+/* Gender */
+#gender{
+    margin-right: -40px;
+    padding-right: 20px;
+}
+
+#blankRadio1{
+    margin-left: 10%;
+}
+
+/* END */
+
+/* Delivery Information */
+
+
+/* END */
+
+
+.bottomText{
+    color: gray;
+}
+
+.createBtn{
+    margin-bottom: 5%;
+}
+
+
+/* Nav styling and position */
+@media (max-width: 200000px) {
+    .navbar-header {
+        float: none;
+        padding: 0 20px;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+        float: left;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+    .login{
+    width: 200px;
+    float: right;
+    height: 50px;
+    line-height: 50px;}
+
+    .firstline{
+    list-style: none;
+    float:left;
+    width: 50%;
+    text-align: center;
+   }
+}
+
