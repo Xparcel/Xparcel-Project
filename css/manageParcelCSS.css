@@ -4,6 +4,15 @@ body {
     margin-left: 130px;
 }
 
+td {border: 1px #DDD solid; padding: 5px; cursor: pointer;}
+
+.selected {
+    background-color: rgba(97, 131, 148, 0.6);
+    border-style: solid;
+    border-color: rgba(147, 154, 193, 0.97);
+    color: #FFF;
+}
+
 #userName{
     
     float: right;
@@ -74,15 +83,9 @@ body {
     
 }
 
-<<<<<<< HEAD
-
-
-
-=======
 #PackSuccess{
     display:none;
 }
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 
 
 
