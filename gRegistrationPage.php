@@ -2,10 +2,6 @@
 <html>
 <?php
    session_start();
-<<<<<<< HEAD
-   echo $_SESSION['$userID'];
-=======
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 ?>
    <head>
      <meta charset="UTF-8">

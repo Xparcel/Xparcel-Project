@@ -5,11 +5,7 @@
         include "php/loadPackages.php";
         //Session start included in loadPackages.php
       ?> 
-<<<<<<< HEAD
-
-=======
       <title>Xparcel</title>
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
       <!-- font awesome css  + Latest Bootstrap JS and CSS-->
       <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -56,11 +52,7 @@
             <div id ="packages" class='table-responsive'>
         
               <!-- Table Titles -->        
-<<<<<<< HEAD
-              <table class='table'>
-=======
               <table  class='table'>
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
                       <thead>  
                       <tr>
                       <th>DeliveryDate</th>
@@ -70,11 +62,7 @@
                   </thead>
               
                   <!-- Table Contents -->   
-<<<<<<< HEAD
-                <tbody>
-=======
                 <tbody id = 'tableBody'>
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
                   <tr>
                   
                    <?php  
@@ -97,14 +85,11 @@
 
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               <!-- Success messge if package is found-->
               <div id="PackSuccess" class="alert alert-success fade in">
                 <a href="#"  class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>Success!</strong> Your Package has been added
              </div>
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
              
              <!-- Buttons EDIT / UPDATE / DELETE -->
              <!-- EDIT  -->
@@ -121,14 +106,10 @@
          <div id="liveTrack">
          </div> 
         </div>
-<<<<<<< HEAD
-
-=======
         <?php
           echo $_SESSION['$profileID'];
         ?>
         
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
         <!-- Modal for collecting tracking data-->
         <div id ="Cdialog" title ="Check for Packages">
           <form class="form-horizontal" method="post">
