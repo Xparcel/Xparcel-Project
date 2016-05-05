@@ -6,10 +6,7 @@
 
 $(document).ready(function () {
 
-<<<<<<< HEAD
-=======
 	//windows tab layout
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	$('#table').tabs({
 		event: "click",
 	    // Effects: fadeIn, fadeOut, slideDown, slideUp, animate
@@ -42,42 +39,6 @@ $(document).ready(function () {
       	autoOpen: false,
       	buttons:{
         	"OK": function(){
-<<<<<<< HEAD
-       	
-			sendTrackNum();
-            $(this).dialog("close");
-        
-      },
-      "CANCEL": function(){
-        alert("CANCEL button been pushed");
-        $(this).dialog("close");  
-      }
-    }
-     });
-
-      $('#btnAdd').click(function(){
-            
-            $("#Cdialog").dialog("open");
-      });
-
-      function sendTrackNum(){
-      	 
-      	 $trackNum = $('#trackingNum').val();
-
-      	 $.post('php/AddPackage.php', {
-  	 		trackingNum : $trackNum,
-  	 		method 		: "testTrackNum"
-
-  	 	 	},
-  	 		function(data){  
-
-      	 		alert(data);
-
-      	 });
-      	
-      	 
-      }
-=======
 	       	
 				sendTrackNum();
 	            $(this).dialog("close");
@@ -121,7 +82,8 @@ $(document).ready(function () {
 		 			});
 		 			setTimeout(toggleTimer,2000);
 		 			//add details to table
-		 			addToTable(packArray);	
+		 			//addToTable(packArray);	
+		 			$("#tablebody").load("/xparcel/php/reloadPackages.php");
 		 		}
 
 		 });
@@ -154,7 +116,19 @@ $(document).ready(function () {
 		cell0.innerHTML = $Ddate;
 		cell1.innerHTML = $stat;
 		cell2.innerHTML = $tNum;
+
+		//location.reload();
 	}
 
->>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
+	//handling the row selected on the table
+	$("#tablebody tr").click(function(){
+   		$(this).addClass('selected').siblings().removeClass('selected');    
+   		var value=$(this).find('td:first').html();
+   		//alert(value);    
+	});
+
+
+	/*$('.ok').on('click', function(e){
+		alert($("#tablebody tr.selected td:first").html());
+	});*/	
 });
