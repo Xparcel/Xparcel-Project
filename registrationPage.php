@@ -3,10 +3,15 @@
 <?php 
    session_start(); 
 ?>
+<<<<<<< HEAD
 
 
 
    <head>
+=======
+   <head>
+     <title>Xpacrel Register</title>
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
      <meta charset="UTF-8">
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">

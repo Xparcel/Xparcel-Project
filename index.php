@@ -6,7 +6,11 @@
     include "php/googleSign.php";
     ?>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>Document</title>
+=======
+    <title>Xparcel Tracking</title>
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +26,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
+<<<<<<< HEAD
           
+=======
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
           <!-- Login Dropdown - Facebook and Twitter -->
           <div class="login">
             <?php
@@ -106,6 +113,7 @@
         <div class="col-sm-6 cell2">
           <div class="row textid">
             <div class="col-sm-12"><h3>Electronic ID</h3>
+<<<<<<< HEAD
              <br>
               <p>Help identify yourself when you don’t have any ID with you. You can also     send you an Electronic Signature in just one click. 
                 <br>
@@ -115,6 +123,11 @@
                 
                 <br><br>
                 iOS see photo below:</p>
+=======
+              <br>
+              <p>Help identify yourself when you don't have any id with you.
+              You can send your electronic signture in just one click.</p>
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
             </div>
             
             <div class="col-sm-12 how">
@@ -128,6 +141,7 @@
     <div class="container-fluid pack">
       <div class="row-eq-height">
         <div class="col-sm-6 cell1">
+<<<<<<< HEAD
           <div class="textid"> <h3>Manage Your Parcels</h3>
             <br>
             <p>
@@ -139,6 +153,11 @@
                 Xparcel Management System can handle more than one parcel and let you change date, time and/or location*.
                 
             </p>
+=======
+          <div class="textid"> <h3>Manage Your Packets</h3>
+            <br>
+            <p>Add more than one parcel, change date and/or location.</p>
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
           </div>
         </div>
         <div class="col-sm-6 cell2">
@@ -176,6 +195,7 @@
       <div class="container-fluid about">
         <div class="row ">
           <div class="col-sm-4 textabout">
+<<<<<<< HEAD
             <h3>About Xparcel</h3>
             <p>Xparcel Management System is an unique tool with unique minds focused to increase customer service and also reduce costs for carriers companies.</p>
           </div>
@@ -186,6 +206,18 @@
           <div class="col-sm-4 textabout">
             <h3>Who do we want to be?</h3>
             <p>Greater, better and simpler.</p>
+=======
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique.</p>
+          </div>
+          <div class="col-sm-4 textabout">
+            <h3>Who are we?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique.</p>
+          </div>
+          <div class="col-sm-4 textabout">
+            <h3>Who do we want to be?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore incidunt suscipit similique.</p>
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
           </div>
         </div>
       </div>

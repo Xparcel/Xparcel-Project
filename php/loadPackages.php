@@ -3,10 +3,22 @@
 	/*This file is responsible for loading in existing package
 	details and verifying the existance of the package tracking 
 	number*/ 
+<<<<<<< HEAD
 
 	session_start();
 
 	include "connection.php";
+=======
+	
+	if(session_id()){
+	}
+	else{
+		session_start();
+		include "connection.php";
+	}
+
+	//include "connection.php";
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	
     //find out the logined users Profile ID and load details
     function getProfileID(){
@@ -33,8 +45,24 @@
 		}
 		//if there are no details to load
 		else{
+<<<<<<< HEAD
 			
 			var_dump("Nothing to display");
+=======
+			echo "<tr class ='tb'><td></td><td></td><td></td></tr>
+	     		   <tr id='table1' class='tb'> 
+
+	                            <td></td>
+	                            <td> <div id='alertNoPack' class='alert alert-info'>
+    									<strong>Add a package! </strong> click the Add button to start managing your packages.
+  									</div>
+  								</td>
+	                            <td></td>
+	                            </tr> 
+
+	                            ";
+			
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 		}
     }
 
@@ -50,14 +78,24 @@
 	    $query->execute();
 
 	    $sth = $query->fetchAll(PDO::FETCH_NUM);
+<<<<<<< HEAD
 	    $x =0;
+=======
+	    
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	    //if there are details to enter to the table
 	    if (!empty($sth)){
 
 		    foreach ($sth as $row){
+<<<<<<< HEAD
 		    			$x++;
                         echo "<tr class='tb'> 
                        		<!--<td><input type='radio' name='".$x."'></td>-->
+=======
+		    		
+                        echo "<tr id='table1' class='tb'> 
+                       		
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
                             <td>$row[0]</td>
                             <td>$row[1]</td>
                             <td>$row[2]</td>
@@ -69,6 +107,7 @@
 	     //if there are not details to enter into the table
 	     else{
 	     	echo "<tr class ='tb'><td></td><td></td><td></td></tr>
+<<<<<<< HEAD
 	     		   <tr class='tb'> 
 
 	                            <td></td>
@@ -78,6 +117,20 @@
 
 	                            <tr class='tb'><td></td><td></td><td></td</tr>
 	                            <tr class='tb'><td></td><td></td><td></td></tr> ";
+=======
+	     		   <tr id='table1' class='tb'> 
+
+	                            <td></td>
+	                            <td> <div id='alertNoPack' class='alert alert-info'>
+    									<strong>Add a package! </strong> click the Add button to start managing your packages.
+  									</div>
+  								</td>
+	                            <td></td>
+	                            </tr> 
+
+	                            ";
+
+>>>>>>> 8f8ff44f8d8c7070ecb27194f8f0d9689bc3c722
 	     }             
 
 
